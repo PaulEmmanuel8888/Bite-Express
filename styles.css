@@ -3,8 +3,8 @@
   --primary-color: #ff8f00;
   --background-color: #fbf8f2;
   --secondary-color: #fdf0de;
-  --desktop-logo-size: 23px;
-  --mobile-font-size: 20px;
+  --desktop-logo-size: 20px;
+  --mobile-font-size: 18px;
 }
 
 * {
@@ -22,8 +22,8 @@ body {
   width: 100%;
 }
 .logo-img {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
 }
 .tagline {
   position: absolute;
@@ -39,6 +39,7 @@ body {
 header {
   display: flex;
   align-items: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 nav {
   padding: 5px;
@@ -61,4 +62,44 @@ nav {
 .slogan::after {
   content: "   ──";
   color: var(--primary-color);
+}
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.links a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+}
+.links a.active {
+  color: var(--primary-color);
+}
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  padding: 5px 0;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--primary-color);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
 }
