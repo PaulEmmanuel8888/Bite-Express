@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --primary-color: #ff8f00;
   --background-color: #fbf8f2;
   --secondary-color: #fdf0de;
   --desktop-logo-size: 20px;
   --mobile-logo-size: 15px;
+  --desktop-hero-font-size: 38px;
+  --mobile-hero-font-size: 20px;
 }
 
 * {
@@ -39,9 +42,9 @@ body {
 header {
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 nav {
   padding: 5px;
@@ -112,6 +115,104 @@ nav {
   transform: scaleX(1);
 }
 
+#home {
+  width: 100%;
+  min-height: 75vh;
+  position: relative;
+  background-color: var(--background-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ff8f00' fill-opacity='0.05' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero {
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 3%;
+}
+.highlight {
+  color: var(--primary-color);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.hero-text h1 {
+  font-weight: 700;
+}
+.hero-text h2 {
+  font-weight: 500;
+}
+.hero-text h1,
+.hero-text h2 {
+  font-size: var(--desktop-hero-font-size);
+}
+.hero-food {
+  position: relative;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.hero-food img {
+  position: absolute;
+  top: -40%;
+  width: 450px;
+  height: 450px;
+  z-index: 5;
+}
+.description {
+  font-size: 20px;
+  max-width: 400px;
+  text-wrap: wrap;
+}
+.btn-div {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn {
+  font-weight: 500;
+  border: none;
+  font-size: 22px;
+  padding: 25px;
+  width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.order-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+.view-btn {
+  background: none;
+  border: 2px solid var(--primary-color);
+}
+.order-btn:hover {
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: black;
+}
+.view-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 /* Media Queries */
 /* Mobile devices */
 @media (max-width: 768px) {
@@ -136,12 +237,12 @@ nav {
     padding: 10px;
     margin: 10px auto;
     gap: 5px;
-    transform: translateY(-200%);
-    transition: transform 0.5s ease;
+    transform: translateX(-200%);
+    transition: transform 0.5s ease-in-out;
   }
 
   .links.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .hamburger {
