@@ -14,10 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  function removeActive(options) {
+    options.forEach((option) => {
+      option.classList.remove("active");
+    });
+  }
+
+  const navOptions = document.querySelectorAll(".nav-link");
+
+  navOptions.forEach((option) => {
+    option.addEventListener("click", function (e) {
+      removeActive(navOptions);
+      const selectedOption = this;
+      selectedOption.classList.add("active");
+    });
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      console.log("Working");
 
       const targetId = this.getAttribute("href");
       const target = document.querySelector(targetId);
@@ -32,5 +47,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+  });
+
+  const items = document.querySelectorAll(".menu-item");
+  const button = document.querySelector(".view-more-btn");
+
+  let expanded = false;
+  items.forEach((item, index) => {
+    if (index > 2) {
+      item.classList.add("hidden");
+    }
+  });
+
+  button.addEventListener("click", () => {
+    expanded = !expanded;
+
+    items.forEach((item, index) => {
+      if (index > 2) {
+        item.classList.toggle("hidden", !expanded);
+      }
+    });
+
+    button.textContent = expanded ? "View Less" : "View More";
   });
 });
