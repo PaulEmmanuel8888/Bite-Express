@@ -13,4 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburger.classList.add("fa-bars");
     }
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Working");
+
+      const targetId = this.getAttribute("href");
+      const target = document.querySelector(targetId);
+      if (targetId === "#home") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });

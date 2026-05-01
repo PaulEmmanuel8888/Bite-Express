@@ -12,6 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <main>
@@ -35,24 +36,26 @@
           <ul class="links">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
 
           <i class="fa-solid fa-bars hamburger"></i>
         </nav>
       </header>
+
       <section id="home">
         <div class="hero">
           <div class="hero-text">
             <h1>
-              <span class="highlight">Bold Flavors,</span>
+              <span class="highlight">Bold Flavors</span>
             </h1>
             <h2 class="slogan">Ready In Minutes</h2>
             <div class="description">
               <p>
-                Fresh, Flavorful, and Succulent Dishes are only a click away!
+                From <span class="highlight">Craving</span> to
+                <span class="highlight">Bite</span> in a Flash.
               </p>
             </div>
             <div class="btn-div">
@@ -64,6 +67,13 @@
             <img src="/images/hero-food.png" alt="food hero image" />
             <div class="circle"></div>
           </div>
+        </div>
+      </section>
+      <section id="menu">
+        <h2 class="menu-tag">Our Menu</h2>
+        <div class="menu-header">
+          <h2>Must-Try Dishes for You</h2>
+          <button class="btn view-more-btn">View More</button>
         </div>
       </section>
     </main>
