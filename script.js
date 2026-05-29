@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Ice-Cream Sandwich",
       description:
         " Creamy, smooth ice cream nestled between soft sweet layers for a cool, indulgent treat in every bite.",
-      price: "6.99",
+      price: "3.99",
     },
   ];
 

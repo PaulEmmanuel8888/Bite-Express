@@ -102,7 +102,18 @@
   }
   .menu-item {
     min-width: 95%;
-    margin: 0 auto;
+    margin: 0 2px;
     margin-bottom: 10px;
+  }
+  .review-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .review-item {
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+  .review-text {
+    margin-top: 15vh;
   }
 }

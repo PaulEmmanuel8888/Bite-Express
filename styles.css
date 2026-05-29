@@ -19,6 +19,7 @@
 body {
   background-color: var(--background-color);
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 .logo {
   position: relative;
@@ -197,6 +198,10 @@ nav {
   transition: all 0.3s ease;
   letter-spacing: 1px;
 }
+.whitespace {
+  width: 70px;
+  height: 70px;
+}
 .btn:hover {
   transform: scale(1.1);
 }
@@ -241,7 +246,7 @@ nav {
   width: 100%;
 }
 .menu-header h2 {
-  width: 90%;
+  width: 100%;
 }
 .view-more-btn {
   font-weight: 300;
@@ -259,7 +264,7 @@ nav {
 .menu-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 50px;
   min-height: 80vh;
@@ -316,6 +321,7 @@ nav {
 .menu-footer {
   display: flex;
   justify-content: center;
+  margin-bottom: 10vh;
 }
 .popular-tag {
   display: inline-block;
@@ -324,4 +330,68 @@ nav {
   padding: 5px;
   border-radius: 10px;
   transform: rotate(-6deg);
+}
+
+/* Reviews Section */
+#reviews {
+  min-height: 90vh;
+}
+.review-header {
+  font-size: 30px;
+  text-align: center;
+  margin: 10vh 0;
+}
+.review-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-bottom: 10vh;
+}
+.review-item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.review-details .review-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+}
+.review-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -10%;
+  left: 10%;
+}
+.review-text {
+  margin-top: 15vh;
+  line-height: 1.5rem;
+  font-style: italic;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.review-text::before {
+  content: "“";
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.review-text::after {
+  content: "”";
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.review-name {
+  margin-left: 20px;
+  font-size: 19px;
+  font-weight: bold;
 }
