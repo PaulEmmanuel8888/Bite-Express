@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .text {
     font-size: var(--mobile-logo-size);
     font-weight: bold;
@@ -95,5 +95,14 @@
   .btn {
     font-weight: 550;
     width: 80%;
+  }
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-item {
+    min-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
 }
