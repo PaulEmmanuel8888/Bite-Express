@@ -49,6 +49,69 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //Menu items
+  const menuItems = [
+    {
+      id: 1,
+      img: "./images/vibrant-vegetable-salad-bowl-healthy-delicious-meal.png",
+      name: "Vegetable Salad",
+      description:
+        " A fresh bowl of crisp salad with juicy tomatoes, crunchy onions, and sweet peppers, tossed for a light and refreshing bite.",
+      price: "4.99",
+    },
+    {
+      id: 2,
+      img: "./images/juicy-cheeseburger-gourmet-burger-perfection (2).png",
+      name: "Beef Cheeseburger",
+      description:
+        " A juicy beef cheeseburger with tomatoes, onions, and lettuce between hot buns. ",
+      price: "5.99",
+    },
+    {
+      id: 3,
+      img: "./images/orange-juice (2).png",
+      name: "Orange Juice",
+      description:
+        " A chilled glass of freshly squeezed orange juice, bursting with bright citrus flavor for a sweet and refreshing sip.",
+      price: "0.99",
+    },
+    {
+      id: 4,
+      img: "./images/juicy-cheeseburger-gourmet-burger-perfection (2).png",
+      name: "Beef Cheeseburger",
+      description:
+        " A juicy beef cheeseburger with tomatoes, onions, and lettuce between hot buns. ",
+      price: "5.99",
+    },
+  ];
+
+  const menuContainer = document.querySelector(".menu-container");
+
+  menuItems.forEach((item) => {
+    console.log(item.img);
+    const divItem = document.createElement("div");
+    divItem.className = "menu-item";
+    divItem.innerHTML = `
+    <img
+      id="food-img-${item.id}"
+      class="food-img"
+      src="${item.img}"
+      alt="menu item image"
+    />
+    <p class="food-name">${item.name}</p>
+    <p class="food-description">
+      ${item.description}
+    </p>
+    <div class="details">
+      <p class="price">$${item.price}</p>
+      ${item.id == 2 ? `<p class="popular-tag">Most Popular</p>` : ``}
+      
+    </div>
+    `;
+
+    menuContainer.appendChild(divItem);
+  });
+
   const items = document.querySelectorAll(".menu-item");
   const button = document.querySelector(".view-more-btn");
 
