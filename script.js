@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 4,
-      img: "./images/juicy-cheeseburger-gourmet-burger-perfection (2).png",
-      name: "Beef Cheeseburger",
+      img: "./images/ice-cream-sandwich.png",
+      name: "Ice-Cream Sandwich",
       description:
-        " A juicy beef cheeseburger with tomatoes, onions, and lettuce between hot buns. ",
-      price: "5.99",
+        " Creamy, smooth ice cream nestled between soft sweet layers for a cool, indulgent treat in every bite.",
+      price: "6.99",
     },
   ];
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ${item.description}
     </p>
     <div class="details">
-      <p class="price">$${item.price}</p>
+      <p class="price highlight">$${item.price}</p>
       ${item.id == 2 ? `<p class="popular-tag">Most Popular</p>` : ``}
       
     </div>
