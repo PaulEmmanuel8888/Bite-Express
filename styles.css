@@ -336,6 +336,11 @@ nav {
 #reviews {
   min-height: 90vh;
 }
+.section-header {
+  font-size: 30px;
+  text-align: center;
+  margin: 10vh 0;
+}
 .review-header {
   font-size: 30px;
   text-align: center;
@@ -394,4 +399,70 @@ nav {
   margin-left: 20px;
   font-size: 19px;
   font-weight: bold;
+}
+
+/* About Section */
+#about {
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+}
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10vh;
+}
+.about-photo {
+  margin: -5vh 0 10vh 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15); */
+}
+.about-photo img {
+  object-fit: cover;
+  width: 420px;
+  height: 420px;
+  z-index: 2;
+  margin-top: -10vh;
+}
+.about-photo .circle {
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  top: 35%;
+  width: 70%;
+  height: 70%;
+}
+.about-text {
+  width: 500px;
+  font-size: 24px;
+  font-style: italic;
+}
+.about-icons {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.about-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+}
+.about-icon i {
+  color: var(--primary-color);
+  font-size: 30px;
 }

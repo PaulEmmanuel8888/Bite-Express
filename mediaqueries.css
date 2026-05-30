@@ -116,4 +116,41 @@
   .review-text {
     margin-top: 15vh;
   }
+  #about {
+    margin: 0 auto;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 90%;
+    align-items: center;
+  }
+  .about-photo {
+    margin-top: 5vh;
+    width: 300px;
+    height: 300px;
+    margin-left: 25px;
+  }
+  .about-photo img {
+    width: 300px;
+    height: 300px;
+    top: 0;
+  }
+  .about-text {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    margin-left: 25px;
+  }
+  .about-icons {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about-icon {
+    width: 90%;
+    margin-left: 30px;
+  }
 }
