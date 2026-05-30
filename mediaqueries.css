@@ -153,4 +153,18 @@
     width: 90%;
     margin-left: 30px;
   }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contact-form form {
+    gap: 15px;
+  }
+  .whitespace {
+    height: 100px;
+  }
 }
