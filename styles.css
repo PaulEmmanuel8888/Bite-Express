@@ -550,4 +550,14 @@ textarea:focus {
   cursor: pointer;
 }
 .footer {
+  background-color: var(--secondary-color);
+  min-height: 30vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .text {
+  font-size: 30px;
 }

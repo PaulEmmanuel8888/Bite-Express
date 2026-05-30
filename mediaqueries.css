@@ -167,4 +167,8 @@
   .whitespace {
     height: 100px;
   }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }

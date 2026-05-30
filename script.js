@@ -23,10 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const navOptions = document.querySelectorAll(".nav-link");
 
   navOptions.forEach((option) => {
-    option.addEventListener("click", function (e) {
+    option.addEventListener("click", function () {
       removeActive(navOptions);
-      const selectedOption = this;
-      selectedOption.classList.add("active");
+      this.classList.add("active");
+
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("fa-xmark");
+      hamburger.classList.add("fa-bars");
     });
   });
 
